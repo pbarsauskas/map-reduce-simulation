@@ -1,0 +1,12 @@
+{
+    "dataset": "data/sample_dataset",
+    "output_file": "output.csv",
+    "key": "date",
+    "value": "count",
+    "map": {
+        "logic": ["df = pd.DataFrame()\nfor i in files:\n    df = df.append(pd.read_csv(i))\ndf = df.groupby(key)[key].count().sort_index().to_frame()\nqueue.put(df)"]
+    },
+    "reduce": {
+        "logic": ["for i in range(0, len(files)):\n    df = df.append(queue.get(i))\ndf = df[pars['key']].groupby(pars['key']).sum().sort_index().to_frame(pars['value'])\ndf.to_csv(path + '/data/' + pars['output_file'])"]
+    }
+}
