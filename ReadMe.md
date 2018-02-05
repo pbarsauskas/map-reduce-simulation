@@ -1,7 +1,9 @@
-#Framework to simulate MapReduce process
 
-This is an attemt to create a simplified MapReduce workflow simulation.
-Data (in csv files) is processed in parallel (to simulate processing in multiple nodes) and the ouputs are aggregated by the reduce task.
+##Framework to simulate MapReduce process
+
+This is an attempt to create a simplified MapReduce workflow simulation.
+Data (in csv files) is processed in parallel (to simulate processes in multiple nodes). 
+Map operation outputs are aggregated by the reduce task and the final results is saved to disk in csv format.
 The framework has a basic command line interface which allows scheduling of jobs. 
 
 #### Prerequisites
