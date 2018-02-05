@@ -3,7 +3,7 @@
 
 This is an attempt to create a simplified MapReduce workflow simulation.
 Data (in csv files) is processed in parallel (to simulate processes in multiple nodes). 
-Map operation outputs are aggregated by the reduce task and the final results is saved to disk in csv format.
+Map operation outputs are aggregated by the reduce task and the final results are saved to disk in csv format.
 The framework has a basic command line interface which allows scheduling of jobs. 
 
 #### Prerequisites
