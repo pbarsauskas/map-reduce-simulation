@@ -1,5 +1,5 @@
 
-##Framework to simulate MapReduce process
+## Framework to simulate MapReduce process
 
 This is an attempt to create a simplified MapReduce workflow simulation.
 Data (in csv files) is processed in parallel (to simulate processes in multiple nodes). 
